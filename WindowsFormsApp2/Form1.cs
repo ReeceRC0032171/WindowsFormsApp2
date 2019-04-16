@@ -26,7 +26,8 @@ namespace WindowsFormsApp2
                 double resistor3 = Double.Parse(textBox8.Text);
                 double resistor4 = Double.Parse(textBox10.Text);
 
-                double totalresistance = 1.0/resistance1+
+                double totalresistance = 1.0 / (resistor1 + 1.0 / resistor2 + 1.0 / resistor3 + 1.0 / resistor4 + 1.0);
+                MessageBox.Show("total resistance =" + totalresistance.ToString("0.00") + "ohms");
             }
             catch
             {
@@ -52,7 +53,37 @@ namespace WindowsFormsApp2
             double resistor4 = double.Parse(textBox5.Text);
 
             double totalresistance = resistor1 + resistor2 + resistor3 + resistor4;
-            MessageBox.Show("total resistance =" + totalresistance.ToString("0.00") + "ohms");
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
         private void Series_Click(object sender, EventArgs e)
@@ -76,6 +107,11 @@ namespace WindowsFormsApp2
         }
 
         private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
